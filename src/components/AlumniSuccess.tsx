@@ -2,15 +2,15 @@ import React from 'react';
 
 const AlumniSuccess = () => {
   const universities = [
-    { name: "Stanford University", logo: "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Yale University", logo: "https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Harvard University", logo: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "University of Pennsylvania", logo: "https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Princeton University", logo: "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Columbia University", logo: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "UC Berkeley", logo: "https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Cornell University", logo: "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" },
-    { name: "Georgetown University", logo: "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop" }
+    { name: "Stanford University", logo: "/images/universities/stanford-university.png" },
+    { name: "Yale University", logo: "/images/universities/yale-university.png" },
+    { name: "Harvard University", logo: "/images/universities/harvard-university.svg" },
+    { name: "University of Pennsylvania", logo: "/images/universities/university-of-pennsylvania.png" },
+    { name: "Princeton University", logo: "/images/universities/princeton-university.png" },
+    { name: "Columbia University", logo: "/images/universities/columbia-university.png" },
+    { name: "UC Berkeley", logo: "/images/universities/uc-berkeley.png" },
+    { name: "Cornell University", logo: "/images/universities/cornell-university.jpg" },
+    { name: "Georgetown University", logo: "/images/universities/georgetown-university.png" }
   ];
 
   return (
@@ -24,12 +24,11 @@ const AlumniSuccess = () => {
           <div className="flex animate-scroll space-x-12">
             {[...universities, ...universities].map((university, index) => (
               <div key={index} className="flex-shrink-0 w-48 h-24 bg-white rounded-lg shadow-md flex items-center justify-center p-4 hover:shadow-lg transition-shadow">
-                <div className="text-center">
-                  <div className="w-8 h-8 bg-[#015c22] rounded-full mx-auto mb-2"></div>
-                  <span className="font-lato text-sm font-semibold text-gray-700">
-                    {university.name}
-                  </span>
-                </div>
+                <img 
+                  src={university.logo} 
+                  alt={university.name}
+                  className="h-12 w-auto object-contain max-w-full"
+                />
               </div>
             ))}
           </div>

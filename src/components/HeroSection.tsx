@@ -14,7 +14,7 @@ const HeroSection = () => {
 
       {/* Content positioned on the right blank space */}
       <div className="relative z-10 w-full flex justify-end">
-        <div className="w-2/5 min-h-screen flex items-center pr-8 pl-4">
+        <div className="w-2/5 min-h-screen flex items-center pr-4 pl-16">
           <div className="max-w-lg">
             <h1 className="font-montserrat font-bold text-5xl lg:text-6xl text-[#015c22] leading-tight mb-6">
               Kudos College of Youth Leadership
